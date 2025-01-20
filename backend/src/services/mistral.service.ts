@@ -57,7 +57,7 @@ export const sendMessageToMistral = async (message: string): Promise<any> => {
         }
 
         console.log("Aucune action spécifique trouvée. Renvoi de la réponse brute.");
-        return {message: data || "Aucune réponse exploitable reçue de Mistral."};
+        return {message: data || "Désolé j'ai rencontrer un problème!"};
     } catch (error: any) {
         console.error("Erreur API Mistral : ", error);
 

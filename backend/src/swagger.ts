@@ -11,11 +11,14 @@ const options: swaggerJsDoc.Options = {
         },
         servers: [
             {
-                url: "http://localhost:6000",
+                url: "http://localhost:7000",
             },
         ],
     },
-    apis: ["./src/auth/auth.route.ts"],
+    apis: [
+        "./src/auth/auth.route.ts",
+        "./src/routes/*.route.ts",
+    ],
 };
 
 export const swaggerSpec = swaggerJsDoc(options);

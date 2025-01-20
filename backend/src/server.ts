@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT ?? 7000;
 
 process.on("SIGINT", () => {
     console.log("Process terminated. Cleaning up...");
@@ -15,7 +15,7 @@ const server = app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log("  ");
     console.log("API Documentation:");
-    console.log("http://localhost:6000/api-docs");
+    console.log(`http://localhost:${PORT}/api-docs`);
     console.log("------------------");
 });
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Mic, MicOff } from 'lucide-react';
 import { ThemeProvider, createTheme, Snackbar, Alert } from '@mui/material';
 import { WaveAnimation } from './components/WaveAnimation.tsx';

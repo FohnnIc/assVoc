@@ -61,8 +61,12 @@ export const sendMessageToMistral = async (message: string): Promise<any> => {
     } catch (error: any) {
         console.error("Erreur API Mistral : ", error);
 
+        const status = error.response?.status || 'Status Inconnu';
+        const statusText = error.response?.statusText || 'Aucun statut';
+        const body = error.response?.data || 'Pas de réponse';
+
         throw new Error(
-            `API error occurred: Status ${error.response?.status || 'Unknown'} Content-Type ${error.response?.headers["content-type"] || 'Unknown'} Body ${error.response?.data || error.message}`
+            `API error occurred: Status ${status} (${statusText}) | Body: ${body}`
         );
     }
 };
